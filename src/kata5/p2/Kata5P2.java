@@ -8,6 +8,8 @@ package kata5.p2;
  import kata5.p2.view.HistogramDisplay;
  import kata5.p2.view.MailHistogramBuilder;
  import kata5.p2.view.MailListReader;
+ import java.sql.SQLException;
+ import java.util.ArrayList;
  
  public class Kata5P2 {
      public static void main(String[] args) throws IOException, Exception {
@@ -16,7 +18,7 @@ package kata5.p2;
      }
      
      private String filename;
-     private List<Mail> mailList;
+     private ArrayList<Mail> mailList;
      private Histogram<String> histogram;
      private static HistogramDisplay histoDisplay;
          
@@ -26,9 +28,9 @@ package kata5.p2;
          output();
      }
      
-     private void input() throws IOException{
+     private void input() throws IOException, ClassNotFoundException, SQLException{
         filename = "/Users/Ithiel/NetBeansProjects/Kata4/emails.txt";
-        mailList = MailListReader.read(filename);
+        mailList = MailListReader.read();
      }
      
      private void process() throws Exception{
