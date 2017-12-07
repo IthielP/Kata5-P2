@@ -1,4 +1,4 @@
-package kata4;
+package kata5.p2;
  
  import java.io.FileNotFoundException;
  import java.io.IOException;
